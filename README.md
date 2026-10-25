@@ -2,6 +2,7 @@
 
 ## Project Overview
 This project automates functional test scenarios for the SauceDemo e-commerce demo website using Cypress and JavaScript.
+![Cypress Tests](https://github.com/sowmiyakodiswaran/ecommerce-cypress-testing/actions/workflows/cypress.yml/badge.svg)
 
 ## Objectives
 - Validate login functionality and error handling.
