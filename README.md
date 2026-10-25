@@ -69,17 +69,14 @@ SauceDemo is a demo application used for testing practice.
 ## Test Execution Evidence
 
 ### Cypress Test Run
-![Cypress test execution results](screenshots/test-run-results.png)
 <img width="1315" height="312" alt="image" src="https://github.com/user-attachments/assets/43b96ffa-9343-4512-8dcf-2b88d8f23450" />
 
 
 ### Login Validation
-![Login validation test](screenshots/login-test.png)
 <img width="907" height="281" alt="image" src="https://github.com/user-attachments/assets/7ecacedf-887c-4a3c-a6cf-236b40b33a47" />
 
 
 ### Product Selection
-![Product selection test](screenshots/product-selection.png)
 <img width="957" height="305" alt="image" src="https://github.com/user-attachments/assets/81ceafab-42fa-4d6f-b0d8-bbab25b8b881" />
 
 ### Addition to Cart
