@@ -15,14 +15,30 @@ This project automates functional test scenarios for the SauceDemo e-commerce de
 - Cypress
 - Node.js
 - Git and GitHub
+## Test Scenarios Covered
 
-## Test Coverage
-- Login validation
-- Product listing and sorting
-- Cart management
-- Checkout validation
-- Order confirmation
-- Continue shopping after checkout
+The project focuses on validating key e-commerce user workflows using Cypress and JavaScript.
+
+### 1. Login Validation
+- Verify that a user can log in with valid credentials.
+- Validate the application's response to invalid credentials.
+- Check that the expected page or error message appears after login attempts.
+
+### 2. Product Selection
+- Verify that products are displayed correctly.
+- Select a product and validate the expected interaction.
+- Check that the selected product information is displayed as expected.
+
+### 3. Shopping Workflows
+- Validate key shopping interactions.
+- Verify that selected products are handled as expected during the workflow.
+- Check the application's behavior after user actions.
+
+### Testing Approach
+- **Framework:** Cypress
+- **Language:** JavaScript
+- **Testing type:** End-to-end testing
+- **Validation:** Assertions and UI behavior checks
 
 ## Installation and Setup
 
