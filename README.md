@@ -44,7 +44,7 @@ The project demonstrates UI testing, test automation, assertions, and continuous
 - Test checkout-related form interactions.
 - Validate expected checkout behavior and order summary where covered by the test cases.
 
-*Note: The scenarios listed above should be kept aligned with the actual assertions in the test files.*
+
 
 ## Testing Approach
 
