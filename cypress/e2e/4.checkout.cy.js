@@ -86,4 +86,38 @@ describe("Checkout Functionality", () => {
 
     cy.get(".shopping_cart_badge").should("have.text", "1");
   });
+  
+  it("TC12 - Verify checkout overview and total", () => {
+    cy.get('[data-test="firstName"]').type("Test");
+    cy.get('[data-test="lastName"]').type("User");
+    cy.get('[data-test="postalCode"]').type("600001");
+
+    cy.get('[data-test="continue"]').click();
+
+    // Confirm navigation to the checkout overview
+    cy.url().should("include", "/checkout-step-two.html");
+
+    // Confirm the product is shown
+    cy.get(".cart_item").should("have.length", 1);
+
+    // Read and validate the subtotal, tax, and total
+    cy.get(".summary_subtotal_label").invoke("text").then((subtotalText) => {
+      cy.get(".summary_tax_label").invoke("text").then((taxText) => {
+        cy.get(".summary_total_label").invoke("text").then((totalText) => {
+          const subtotal = Number(subtotalText.replace("Item total: $", "").trim());
+          const tax = Number(taxText.replace("Tax: $", "").trim());
+          const total = Number(totalText.replace("Total: $", "").trim());
+
+          expect(subtotal).to.be.greaterThan(0);
+          expect(tax).to.be.greaterThan(0);
+          expect(total).to.be.greaterThan(0);
+
+          expect(
+            Math.round((subtotal + tax) * 100)
+          ).to.equal(Math.round(total * 100));
+        });
+      });
+    });
+  });
+
 });
