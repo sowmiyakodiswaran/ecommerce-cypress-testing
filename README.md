@@ -6,15 +6,16 @@
 
 This project automates end-to-end functional test scenarios for the [SauceDemo](https://www.saucedemo.com/) e-commerce demo application using Cypress and JavaScript.
 
-The project demonstrates UI testing, test automation, assertions, and continuous integration using GitHub Actions.
+It demonstrates UI test automation, reusable commands, assertions, functional workflow validation, and continuous integration using GitHub Actions.
 
 ## Objectives
 
 - Validate login functionality and error handling.
-- Verify product display and selection.
-- Test shopping cart interactions.
-- Validate checkout workflows.
-- Execute automated tests through GitHub Actions.
+- Verify product listings and price sorting.
+- Test shopping cart operations, including adding and removing products.
+- Validate checkout form behavior and order completion.
+- Verify checkout summary calculations.
+- Run automated tests through GitHub Actions.
 
 ## Tech Stack
 
@@ -27,32 +28,34 @@ The project demonstrates UI testing, test automation, assertions, and continuous
 ## Test Scenarios
 
 ### 1. Login Validation
-- Verify login with valid credentials.
-- Validate the response to invalid credentials.
-- Check expected page navigation and error messages.
+- Login with valid credentials.
+- Validate invalid login credentials.
+- Verify error handling when login fields are empty.
 
 ### 2. Product Selection
-- Verify product listings.
-- Test product selection and related UI interactions.
+- Verify that products are displayed.
+- Verify sorting by price from low to high.
 
 ### 3. Shopping Cart
-- Test adding products to the cart.
-- Test removing products from the cart.
-- Verify relevant cart interactions.
+- Add a product to the cart.
+- Remove a product from the cart.
+- Verify cart contents and cart badge behavior.
 
 ### 4. Checkout
-- Test checkout-related form interactions.
-- Validate expected checkout behavior and order summary where covered by the test cases.
-
-
+- Complete checkout with valid details.
+- Validate missing required checkout information.
+- Verify the checkout overview and calculate the order total from subtotal and tax.
+- Complete checkout, verify the confirmation message, return to the products page, and add another product.
 
 ## Testing Approach
 
 - End-to-end UI testing
-- Automated assertions
-- Functional workflow validation
+- Functional testing
+- Positive and negative test scenarios
+- Assertions and validation checks
+- Reusable Cypress custom commands
 - Headless test execution
-- Continuous integration with GitHub Actions
+- Continuous integration using GitHub Actions
 
 ## Installation and Setup
 
@@ -96,7 +99,7 @@ The project demonstrates UI testing, test automation, assertions, and continuous
 
 [SauceDemo](https://www.saucedemo.com/)
 
-SauceDemo is a demo e-commerce application suitable for practicing web testing and automation.
+SauceDemo is a demo e-commerce application used here to practice web testing and automation.
 
 ## Project Structure
 
@@ -107,9 +110,15 @@ ecommerce-cypress-testing/
 │       └── cypress.yml
 ├── cypress/
 │   ├── e2e/
-│   │   └── *.cy.js
+│   │   ├── login.cy.js
+│   │   ├── selection.cy.js
+│   │   ├── cart.cy.js
+│   │   └── checkout.cy.js
+│   ├── fixtures/
 │   └── support/
+│       ├── commands.js
 │       └── e2e.js
+├── .gitignore
 ├── cypress.config.js
 ├── package.json
 ├── package-lock.json
@@ -120,23 +129,23 @@ ecommerce-cypress-testing/
 
 ### Cypress Test Run
 
-<img width="1315" height="312" alt="image" src="https://github.com/user-attachments/assets/43b96ffa-9343-4512-8dcf-2b88d8f23450" />
+<img width="1315" height="312" alt="Cypress test run evidence" src="https://github.com/user-attachments/assets/43b96ffa-9343-4512-8dcf-2b88d8f23450" />
 
 ### Login Validation
 
-<img width="907" height="281" alt="image" src="https://github.com/user-attachments/assets/7ecacedf-887c-4a3c-a6cf-236b40b33a47" />
+<img width="907" height="281" alt="Login validation test evidence" src="https://github.com/user-attachments/assets/7ecacedf-887c-4a3c-a6cf-236b40b33a47" />
 
 ### Product Selection
 
-<img width="957" height="305" alt="image" src="https://github.com/user-attachments/assets/81ceafab-42fa-4d6f-b0d8-bbab25b8b881" />
+<img width="957" height="305" alt="Product selection test evidence" src="https://github.com/user-attachments/assets/81ceafab-42fa-4d6f-b0d8-bbab25b8b881" />
 
-### Addition to Cart
+### Shopping Cart
 
-<img width="959" height="307" alt="image" src="https://github.com/user-attachments/assets/31233305-a3f4-4a14-801f-cdb3e40f1ae0" />
+<img width="959" height="307" alt="Shopping cart test evidence" src="https://github.com/user-attachments/assets/31233305-a3f4-4a14-801f-cdb3e40f1ae0" />
 
 ### Checkout
 
-<img width="959" height="318" alt="image" src="https://github.com/user-attachments/assets/8ea31ef4-e5cc-47d6-941f-449c1e182995" />
+<img width="959" height="318" alt="Checkout test evidence" src="https://github.com/user-attachments/assets/8ea31ef4-e5cc-47d6-941f-449c1e182995" />
 
 ## Continuous Integration
 
@@ -146,23 +155,4 @@ Check the workflow badge at the top of this README for the latest status.
 
 ## Author
 
-Software Testing and Cypress Automation Project
-2b88d8f23450" />
-
-
-### Login Validation
-<img width="907" height="281" alt="image" src="https://github.com/user-attachments/assets/7ecacedf-887c-4a3c-a6cf-236b40b33a47" />
-
-
-### Product Selection
-<img width="957" height="305" alt="image" src="https://github.com/user-attachments/assets/81ceafab-42fa-4d6f-b0d8-bbab25b8b881" />
-
-### Addition to Cart
-<img width="959" height="307" alt="image" src="https://github.com/user-attachments/assets/31233305-a3f4-4a14-801f-cdb3e40f1ae0" />
-
-### Checkout of Products
-
-
-
-## Author
 Software Testing Project | Cypress Automation
